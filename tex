@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath, amssymb} % For math symbols and environments
+
+\title{Number Theory HW1}
+\author{41340116S Eason Lin}
+\date{March 2025}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Q1.} If $\gcd(a, b) = d$, show that 
+\[
+\gcd\!\Bigl(\frac{a}{d}, \frac{b}{d}\Bigr) = 1.
+\]
+
+\textbf{Proof.} Since $\gcd(a, b) = d$, we can write
+\[
+a = d x \quad \text{and} \quad b = d y,
+\]
+for some integers $x$ and $y$. Now, assume that $r$ is a common divisor of $x$ and $y$. Then $r$ divides both $x$ and $y$, so $dr$ divides both $a$ and $b$. But $d$ is defined as the greatest common divisor of $a$ and $b$, so the only possibility is that $r = 1$. Therefore,
+\[
+\gcd(x, y) = 1,
+\]
+which implies that
+\[
+\gcd\!\Bigl(\frac{a}{d}, \frac{b}{d}\Bigr) = 1.
+\]
+
+\hfill$\Box$
+
+\bigskip
+
+\textbf{Q2.} Calculate $\gcd(13579, 2468).$
+
+\textbf{Solution.} We use the Euclidean algorithm:
+\[
+13579 = 2468 \times 5 + 1239,
+\]
+\[
+2468 = 1239 \times 1 + 1229,
+\]
+\[
+1239 = 1229 \times 1 + 10,
+\]
+\[
+1229 = 10 \times 122 + 9,
+\]
+\[
+10 = 9 \times 1 + 1,
+\]
+\[
+9 = 1 \times 9 + 0.
+\]
+Thus, $\gcd(13579, 2468) = 1$.
+
+\end{document}
